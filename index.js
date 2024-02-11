@@ -29,7 +29,9 @@ if (cluster.isMaster) {
 } else {
   app.listen(port, () => {
     console.log(
-      ` 🚀 Server running on port ${port} 👉 worker pid: ${process.pid}`
+      ` 🚀 Server running on port ${port} 👉 worker pid: ${
+        process.pid
+      } ${os.hostname()}`
     );
   });
 }
